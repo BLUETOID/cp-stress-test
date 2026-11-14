@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C++ Stress Tester</title>
+  <link rel="stylesheet" href="/vendor/codemirror.min.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="title">C++ Stress Tester</div>
+    <div id="statusText" class="status">Ready</div>
+    <div class="actions">
+      <button id="runBtn" type="button">Run Stress Test</button>
+      <button id="stopBtn" type="button" hidden>Stop</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="editors">
+      <div class="box sample-box">
+        <div class="box-header">Sample Input (paste from problem)</div>
+        <textarea id="sampleInput" class="sample-textarea" spellcheck="false" placeholder="Paste the sample input from Codeforces here..."></textarea>
+      </div>
+      <div class="box">
+        <div class="box-header">Your Solution (solution.cpp)</div>
+        <div class="editor-wrap"><textarea id="solutionEditor"></textarea></div>
+      </div>
+      <div class="box">
+        <div class="box-header">Editorial / Correct Solution (correct.cpp)</div>
+        <div class="editor-wrap"><textarea id="correctEditor"></textarea></div>
+      </div>
+    </section>
+
+    <section id="errorSection" class="error-box" hidden>
+      <div class="box-header">Compiler / Runtime Error</div>
+      <pre id="errorOut"></pre>
+    </section>
+
+    <section class="results">
+      <div class="box">
+        <div class="box-header">
+          <span>Wrong Test Case (Input)</span>
+          <button type="button" class="copy-btn" data-target="inputOut">Copy</button>
+        </div>
+        <pre id="inputOut" class="io-pre"></pre>
+      </div>
+      <div class="box">
+        <div class="box-header">
+          <span>Your Output</span>
+          <button type="button" class="copy-btn" data-target="actualOut">Copy</button>
+        </div>
+        <pre id="actualOut" class="io-pre"></pre>
+      </div>
+      <div class="box">
+        <div class="box-header">
+          <span>Expected Output</span>
+          <button type="button" class="copy-btn" data-target="expectedOut">Copy</button>
+        </div>
+        <pre id="expectedOut" class="io-pre"></pre>
+      </div>
+    </section>
+  </main>
+
+  <script src="/vendor/codemirror.min.js"></script>
+  <script src="/vendor/clike.min.js"></script>
+  <script src="/vendor/matchbrackets.min.js"></script>
+  <script src="/vendor/closebrackets.min.js"></script>
+  <script src="/schemaEngine.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "stresstest-cp",
+  "version": "1.0.0",
+  "description": "Utilitarian C++ Competitive Programming Stress Testing Workbench",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/verify.js"
+  }
+}
+
